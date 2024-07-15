@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>category</title>
+</head>
+<link rel="stylesheet" href="style.css"/> 
+<body>
+    <header>
+        <ul>  
+            <div class="logo"></div>
+            <img src="https://imgs.search.brave.com/oVtOUwdZbuK-INeRNXEfKThNocem9o_gsa08JPaSrOw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzMwLzg2LzM2/LzM2MF9GXzEzMDg2/MzY5Nl8zRlhOZkF0/eGZremNwQWpSRllH/RHNkOWZvQ214Tnd2/SC5qcGc" width="90" height="80" alt="logo">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="category.html">Beverages</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact</a></li>
+    
+        </ul>
+        
+        
+    </header>
+    <table border ="1">
+        <columngroup>
+            <col style="background-color: rgb(255, 255, 255);">
+            <col style="background-color: rgb(138, 76, 26);">
+            <col style="background-color: rgb(173, 110, 50);">
+            <col style="background-color: rgb(255, 102, 0);">
+            <col class="column-style">
+          </columngroup>
+        <tr>
+            <th>Milk</th>
+            <th>Coffee</th> 
+            <th>Tea</th>
+            <th>Juice</th>
+       </tr>
+       <tr>
+        <th>Ksh/50</th>
+        <th>Ksh/30</th>
+        <th>Ksh/20</th>
+        <th>Ksh/60</th>
+       </tr>
+        </table><br>
+        <main>
+            <section>
+                <h2>Our Main Beverages</h2>
+                <!-- Product Listing -->
+                <?php include 'products.php'; ?>
+            </section>
+        </main>
+
+<section class="product-grid">
+<h3>Select an item:<h3><br>
+
+    <div class="product">
+        <img src="https://imgs.search.brave.com/-IEyTM_a5j4rF-TQTucJhk2_L6fhWlxXOYgm6IzLrYg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU3/NjgxNzQxL3Bob3Rv/L3doaXRlLW1pbGst/Y2FydG9uLXdpdGgt/Ymx1ZS13cml0aW5n/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz13dVdMZFhPNVlK/UlBKcjJxTmJ0Yk5N/aWhVTzFBb1plQm0x/OUJOZW4tR0RJPQ" alt="milk" width="100" height="100" alt="logo"><br>
+        <button class="button" style="background-color :rgb(255, 255, 255);"> Milk</button><br><br>
+</div>
+        <div class="product">
+        <img src="https://imgs.search.brave.com/m4sgw2Rl_UdSdlEtN9t_0JSE4WkxswR4QUwderLN3VM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcx/MTU5MzI1L3Bob3Rv/L2NvZmZlZS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9N0FZ/QmZyc3dxNTZYOWF0/bnRWblpvZzRSNjlh/ZlFMNkF6UmtGWGFO/TWRWST0" alt="coffee"  width="100" height="100" alt="logo"><br>
+        <button class="button" style="background-color :rgb(146, 83, 24);"> Coffee</button><br><br>
+</div>
+        <div class="product">
+        <img src="https://imgs.search.brave.com/RFL7HpL8LcMiJizsYgGsj6HmTJv9GYNzT9-Eee-d3o8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI1/NzM3ODYxL3Bob3Rv/L3RlYS1pbi10ZWEt/Y3VwLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1uM1JXSk5m/RkZZaV96VUgyOWZi/NU1sdEkxSlNSYTVJ/SU9XYnBTckZYdU5Z/PQ" alt="tea" width="100" height="100" alt="logo"><br>
+        <button class="button" style="background-color :rgb(255, 153, 58);"> Tea</button><br><br>
+</div>
+
+        <div class="product">
+        <img src="https://imgs.search.brave.com/1cWEAnzvYIoE0ZMf_-Q7srUuzfTwe2rLv6R_hMq7AMw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9k/ZWxpY2lvdXMtZ2xh/c3Mtb3JhbmdlLWp1/aWNlXzE0NDYyNy0x/NjU4Mi5qcGc" alt="juice"  width="100" height="100" alt="logo"><br>
+        <button class="button" style="background-color :rgb(255, 123, 0);"> Juice</button><br>
+</div>
+</section>
+<!--this is to add some basic functionality to the cart-->        
+        <h2 id="myButton"></h2>
+
+      <button class="add" onclick="displayResult()">Add items to cart!</button><br><br>
+
+<script>
+function displayResult() {
+    document.getElementById("myButton").innerHTML = "Items added to cart";
+}
+</script>
+<div><button class="cart"><a style="text-decoration:none" href="http://127.0.0.1:3002/purchase.html"> Cart </a></button><br></div>
+
+        <p>Type here to search a specific item</p>
+        <div class ="search">
+                <input type="text" class="search-box" placeholder="search beverage juice,tea etc">
+                <button class="search-btn">search</button>
+            </div>
+
+
+
+            <footer>
+                <p>&copy; Sipsense products 2024</p>
+            </footer>
+</body>
+
+</html>
